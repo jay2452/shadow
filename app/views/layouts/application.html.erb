@@ -8,7 +8,22 @@
 </head>
 <body>
 
+	<nav>
+	    <div class="nav-wrapper" style="background-color: teal;">
+	      	<a href="#" class="brand-logo">Shadow Innovates</a>
+	      	<ul id="nav-mobile" class="right hide-on-med-and-down">
+		        <li><a href="#">Home</a></li>
+		        <li><a href="#">Services</a></li>
+		        <li><a href="#">Contact</a></li>
+	      	</ul>
+	    </div>
+  	</nav>
+<!-- 
+	<p class="notice"><%= notice %></p>
+       <p class="alert"><%= alert %></p>
+ -->
 <%= yield %>
 
+	<%= render partial: "/layouts/footer" %>
 </body>
 </html>
