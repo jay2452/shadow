@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   resources :videos
   resources :photos
+  
   resources :categories do
     resources :photos  
   end

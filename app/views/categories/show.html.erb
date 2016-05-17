@@ -1,5 +1,5 @@
 <p id="notice"><%= notice %></p>
-
+<!-- 
 <p>
   <strong>Name:</strong>
   <%= @category.name %>
@@ -7,3 +7,66 @@
 
 <%= link_to 'Edit', edit_category_path(@category) %> |
 <%= link_to 'Back', categories_path %>
+ -->
+	
+<div class="section">
+	<div class="row">
+		<div class="col s12 m4 13">
+			
+			<p class="center-align">
+				<%= image_tag "camera.jpg", size: "400", class: "left-align" %>
+			</p>
+		</div>
+
+		<div class="col s12 m8 19">
+
+			<div>
+				<h3 class="center-align"><%= @category.name %></h3>
+				<div>
+					<p class="center-align">
+						We do ad promotions, etc
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+					</p>
+					<p class="center-align">
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+					</p>
+				</div>
+					
+			</div>
+				
+	</div>
+</div>
+
+<div class="section white">
+	<div class="row center-align">
+		<h3 class="center-align">Videos</h3>
+		<div class="row" style="margin: 1%;">
+			<% @videos.each do |video| %>				
+				<%= video_tag(video.media.url, controls: true, autobuffer: true, size: "400" )%>	
+			<% end %>
+		</div>
+	</div>
+</div>
+
+<div class="section white">
+	<div class="row center-align">
+		<h3 class="center-align">Photos</h3>
+		<div>
+			<% @photos.each do |photo| %>
+				<%= image_tag photo.image.url, size: "300" %>
+			<% end %>
+				
+		</div>
+	</div>
+</div>

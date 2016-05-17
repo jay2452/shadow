@@ -27,6 +27,7 @@ $(document).ready(function(){
     $('.materialboxed').materialbox();
     $('.modal-trigger').leanModal();
     $('.carousel').carousel();
+    $(".button-collapse").sideNav();
 });
 
 $(document).on('ready page:change', function() {
