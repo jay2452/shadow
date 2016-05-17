@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  resources :videos
+  resources :photos
+  resources :categories do
+    resources :photos  
+  end
   get 'home_pages/index'
 
   devise_for :users

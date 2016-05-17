@@ -45,7 +45,18 @@ group :development do
   gem 'spring'
 end
 
+group :production do
+	gem 'pg'
+end
+
+
 gem 'materialize-sass'
 gem 'devise'
 gem 'cancancan'
 gem 'rolify'
+
+
+gem "paperclip"
+# gem 'jquery-wookmark-rails'
+gem 'masonry-rails'
+gem 'friendly_id'

@@ -1,0 +1,37 @@
+<%= form_for(@video) do |f| %>
+  <% if @video.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@video.errors.count, "error") %> prohibited this video from being saved:</h2>
+
+      <ul>
+      <% @video.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="row">
+    <div class="input-field col s12">
+      <%= f.label :category_id %><br>
+      <%= f.select :category_id, Category.all.collect { |p| [ p.name, p.id ] }, include_blank: true, placeholder: "choose your option" %>
+    </div>
+  </div>
+
+
+  <div class="row">
+    <div class="file-field input-field">
+      <div class="btn">
+        <span>Video</span>
+        <%= f.file_field :media %>
+      </div>
+      <div class="file-path-wrapper">
+        <input class="file-path validate" type="text">
+      </div>
+    </div>
+  </div>
+    
+  <div class="actions" align="center">
+    <%= f.submit "save", class: "btn waves-effect waves-red" %>
+  </div>
+<% end %>

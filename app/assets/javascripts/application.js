@@ -13,10 +13,40 @@
 //= require jquery
 //= require materialize-sprockets
 //= require materialize/extras/nouislider
+//= require masonry/jquery.masonry
+//= require masonry/box-maker
+//= require masonry/jquery.loremimages.min
+//= require isotope/jquery.isotope
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
 
 $(document).ready(function(){
     $('.parallax').parallax();
+    $('select').material_select();
+    $('.materialboxed').materialbox();
+    $('.modal-trigger').leanModal();
+    $('.carousel').carousel();
 });
+
+$(document).on('ready page:change', function() {
+	$('.parallax').parallax();
+    $('select').material_select();
+  Waves.displayEffect();
+  $(".button-collapse").sideNav();
+  $('.modal-trigger').leanModal();
+  $('.carousel').carousel();
+  $('.materialboxed').materialbox();
+});
+
+
+
+
+
+
+  $('#masonry-container').masonry({
+    itemSelector: '.box',
+    columnWidth: 200,
+    isAnimated: !Modernizr.csstransitions,
+    isFitWidth: true
+  });
