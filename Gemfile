@@ -63,3 +63,5 @@ gem "paperclip"
 # gem 'jquery-wookmark-rails'
 gem 'masonry-rails'
 gem 'friendly_id'
+
+gem 'puma'
