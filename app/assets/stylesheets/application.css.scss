@@ -26,12 +26,19 @@
 $primary-color: color("blue", "lighten-2") !default;
 @import 'materialize';
 @import "materialize/extras/nouislider";
+@import url(https://fonts.googleapis.com/css?family=Dancing+Script|Great+Vibes|Alex+Brush|Calligraffitti);
 
 body {
 	display: flex;
 	min-height: 100vh;
 	flex-direction: column;
+	/*font-family: 'Dancing Script', cursive;*/ /*not good*/
+	font-family: 'Great Vibes', cursive;
+	/*font-family: 'Alex Brush', cursive;*/
+	/*font-family: 'Calligraffitti', cursive;*/
+	font-size: 25px;
 }
+
 
 main {
 	flex: 1 0 auto;
