@@ -7,6 +7,8 @@ Rails.application.routes.draw do
   end
   get 'home_pages/index'
 
+  # get '/login', as: '/users/sign_in'
+
   devise_for :users
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

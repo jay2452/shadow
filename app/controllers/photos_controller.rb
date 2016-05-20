@@ -1,10 +1,12 @@
 class PhotosController < ApplicationController
   before_action :set_photo, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!, only: [:edit, :update, :destroy, :new, :create]
 
   # GET /photos
   # GET /photos.json
   def index
     @photos = Photo.all
+    @categories = Category.all
   end
 
   # GET /photos/1

@@ -54,6 +54,7 @@ end
 
 
 gem 'materialize-sass'
+gem "font-awesome-rails"
 gem 'devise'
 gem 'cancancan'
 gem 'rolify'

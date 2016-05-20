@@ -28,6 +28,9 @@ $(document).ready(function(){
     $('.modal-trigger').leanModal();
     $('.carousel').carousel();
     $(".button-collapse").sideNav();
+    $(".dropdown-button").dropdown({
+      hover: true
+    });
 });
 
 $(document).on('ready page:change', function() {
@@ -38,9 +41,10 @@ $(document).on('ready page:change', function() {
   $('.modal-trigger').leanModal();
   $('.carousel').carousel();
   $('.materialboxed').materialbox();
+  $(".dropdown-button").dropdown({
+      hover: true
+  });
 });
-
-
 
 
 
