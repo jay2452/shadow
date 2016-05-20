@@ -17,6 +17,7 @@
 //= require masonry/box-maker
 //= require masonry/jquery.loremimages.min
 //= require isotope/jquery.isotope
+//= require videojs-contrib-hls
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .

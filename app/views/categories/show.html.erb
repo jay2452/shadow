@@ -54,7 +54,9 @@
 		<h3 class="center-align">Videos</h3>
 		<div class="row" style="margin: 1%;">
 			<% @videos.each do |video| %>				
-				<%= video_tag(video.media.url, controls: true, autobuffer: true, size: "400" )%>	
+				<%# video_tag(video.media.url, controls: true, autobuffer: true, size: "400", class: "video-js" )%>	<video class="video-js" controls preload="auto" width="640" height="264" data-setup="{}">
+					<source src="<%= video.media.url %>" type="video/mp4">
+				</video>
 			<% end %>
 		</div>
 	</div>
