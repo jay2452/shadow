@@ -1,10 +1,9 @@
 <nav>
     <div class="nav-wrapper" style="background-color: teal;">
-      	<a href="<%= root_path %>" class="brand-logo">Shadow Innovates</a>
+      	<a href="<%= root_path %>" class="brand-logo">Shadow Innovatives</a>
       	<a href="#" class="button-collapse" data-activates="mobile-side"><i class="material-icons">menu</i></a>
       	<ul id="nav-mobile" class="right hide-on-med-and-down">
 	        <li><a href="<%= root_path %>">Home</a></li>
-	        <!-- <li><a href="#services">Services</a></li> -->
 	        <li><a class="dropdown-button" href="#!" data-activates="dropdown1">Services<i class="material-icons right">arrow_drop_down</i></a></li>
 	        <li><a href="#contact">Contact</a></li>
 	        <% if user_signed_in? %>
@@ -14,7 +13,6 @@
 
       	<ul class="side-nav" id="mobile-side">
       		<li><a href="<%= root_path %>">Home</a></li>
-	        <!-- <li><a href="#">Services</a></li> -->
 	        <% @categories.each do |category| %>	
 				<li><%= link_to category.name, category_path(category) %></li>
 			<% end %>
