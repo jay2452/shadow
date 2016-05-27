@@ -25,7 +25,6 @@
 		</div>
 
 		<div class="col s12 m8 19">
-
 			<div>
 				<h3 class="center-align"><%= @category.name %></h3>
 				<div>
@@ -47,43 +46,49 @@
 						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
 						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 					</p>
-				</div>
-					
+				</div>					
 			</div>
-				
+		</div>				
 	</div>
 </div>
 
-<div class="section white">
-	<div class="row center-align">
-		<h3 class="center-align">Videos</h3>
-		<div class="row center-align">
-			<% @videos.each do |video| %>
-				<%# video_tag(video.media.url, controls: true, autobuffer: true, size: "400", class: "video-js" )%>	
-				<video class="video-js responsive-video" controls preload="auto" width="1200" height="600" data-setup="{}" id="video-test" style="align-items: center;">
-					<source src="<%= video.media.url %>" type="video/mp4">
-				</video>
-			<% end %>
-		</div>
-	</div>
-</div>
 
-<div class="section white">
-	<div class="row center-align">
-		<h3 class="center-align">Photos</h3>
-		<div>
+<% if @videos.count != 0 %>
+	<div class="section white">
+		<div class="row s12 m12">
+			<h3 class="center-align">Videos</h3>
 			<div class="row">
-			  <% @photos.each do |photo| %>
-			    <div class="col s12 m3 hoverable">
-			      <div class="card">
-			        <div class="card-image">
-			          <%= image_tag(photo.image.url, class: "materialboxed", size: "300x200") %>
-			          <!-- <span class="card-title">Card Title</span> -->
-			        </div>
-			      </div>
-			    </div>
-			  <% end %>
-			</div>				
+				<div class="col s12 m12">
+					<% @videos.each do |video| %>
+						<%# video_tag(video.media.url, controls: true, autobuffer: true, size: "400", class: "video-js" )%>	
+						<video class="video-js responsive-video s12" controls preload="auto" width="1200" height="600" data-setup="{}" id="video-test" style="align-items: center;">
+							<source src="<%= video.media.url %>" type="video/mp4">
+						</video>
+					<% end %>
+				</div>
+			</div>
 		</div>
 	</div>
-</div>
+<% end %>
+
+<% if @photos.all.count != 0 %>
+	<div class="section white">
+		<div class="row center-align">
+			<h3 class="center-align">Photos</h3>
+			<div>
+				<div class="row">
+				  <% @photos.each do |photo| %>
+				    <div class="col s12 m3 hoverable">
+				      <div class="card">
+				        <div class="card-image">
+				          <%= image_tag(photo.image.url, class: "materialboxed", size: "300x200") %>
+				          <!-- <span class="card-title">Card Title</span> -->
+				        </div>
+				      </div>
+				    </div>
+				  <% end %>
+				</div>				
+			</div>
+		</div>
+	</div>
+<% end %>
