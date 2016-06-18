@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-  <base href="http://www.shadowinnovatives.com/" />
+  <!-- <base href="http://www.shadowinnovatives.com/" /> -->
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
@@ -28,7 +28,7 @@
 
 	<%= render partial: "/layouts/header" %>
 
-<!-- 
+<!--
 	<p class="notice"><%= notice %></p>
        <p class="alert"><%= alert %></p> -->
 
@@ -45,7 +45,16 @@
         </div>
 
 
-<%= yield %>
+<%# yield %>
+
+<div class="container">
+  <div class="col-md-3"></div>
+  <div class="col-md-6">
+    <%= image_tag("workinprogress.jpg", size: "800x600") %>
+  </div>
+  <div class="col-md-3"></div>
+</div>
+
 
 	<%= render partial: "/layouts/footer" %>
 
